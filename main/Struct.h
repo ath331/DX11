@@ -1,2 +1,10 @@
 #pragma once
 #include "Types.h"
+
+
+/// Á¤Á¡
+struct Vertex
+{
+	Vec3 position;
+	Color color;
+};

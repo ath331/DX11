@@ -29,11 +29,28 @@ private:
 	ComPtr< ID3D11RenderTargetView > m_renderTargetView;
 
 	/// RTV - ClearColor
-	float m_clearColor[ 4 ] = { 0.5f, 0.5f, 0.5f, 0.5f };
+	float m_clearColor[ 4 ] = { 0.0f, 0.0f, 0.0f, 0.0f };
 
 	/// Misc
 	D3D11_VIEWPORT m_viewPort;
 
+private:
+	/// Geometry
+	std::vector< Vertex > m_vertices;
+
+	/// VertexBufffer
+	ComPtr< ID3D11Buffer > m_vertexBuffer;
+
+	/// InputLayOut
+	ComPtr< ID3D11InputLayout > m_inputLayout;
+
+	/// VS
+	ComPtr< ID3D11VertexShader > m_vertexShader;
+	ComPtr< ID3DBlob > m_vsBlob;
+
+	/// PS
+	ComPtr< ID3D11PixelShader > m_pixelShader;
+	ComPtr< ID3DBlob > m_psBlob;
 
 public:
 	/// 생성자
@@ -67,5 +84,25 @@ private:
 
 	/// ViewPort를 세팅한다.
 	void _SetViewPort();
+
+private:
+	/// Geometry를 생성한다.
+	void _CreateGeometry();
+
+	/// InputLayout을 생성한다.
+	void _CreateInputLayout();
+
+	/// VS를 생성한다.
+	void _CreateVS();
+
+	/// PS를 생성한다.
+	void _CreatePS();
+
+	/// Shader 파일을 로드한다.
+	void _LoadShaderFromFile(
+		const std::wstring&            path,
+		const std::string&             name,
+		const std::string&             version,
+		      ComPtr< ID3DBlob >& blob );
 };
 

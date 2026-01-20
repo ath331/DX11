@@ -5,7 +5,11 @@
       <FullPath>C:\Users\ath331\Desktop\a\VisualStudio\C++\DX11\Binaries\main.exe</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
-  <ContentFiles />
+  <ContentFiles>
+    <ContentFile>
+      <FullPath>C:\Users\ath331\Desktop\a\VisualStudio\C++\DX11\Binaries\Default.cso</FullPath>
+    </ContentFile>
+  </ContentFiles>
   <SatelliteDlls />
   <NonRecipeFileRefs />
 </Project>

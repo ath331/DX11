@@ -18,6 +18,9 @@
     <Filter Include="Basic\Console">
       <UniqueIdentifier>{c10c9f96-9ca0-40fe-b7ea-9b3326d0a722}</UniqueIdentifier>
     </Filter>
+    <Filter Include="98.Shaders">
+      <UniqueIdentifier>{05f715fd-35c8-4727-b758-bb4fc55d3901}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h">
@@ -75,5 +78,10 @@
     <ClCompile Include="Basic\Console\ConsoleUtil.cpp">
       <Filter>Basic\Console</Filter>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="98.Shaders\Default.hlsl">
+      <Filter>98.Shaders</Filter>
+    </FxCompile>
   </ItemGroup>
 </Project>
